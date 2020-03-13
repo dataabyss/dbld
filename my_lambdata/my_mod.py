@@ -2,7 +2,7 @@
 # my_lambdata/my_mod.py
 
 # 1) Train/val/test split for a df
-# 2) Split MM/DD/YYYY into multiple columns
+# 2) Replace NaN values with a float
 
 # Enter target in quotes
 def split(df, target):
@@ -22,10 +22,10 @@ def nans(df):
     df.fillna(999, inplace=True)
     return df.isna().sum()
 
-
-
-
 def enlarge(n):
+    """
+    This multiplies a number by 100.
+    """
     return n * 100
 
 #print('JUNK')
