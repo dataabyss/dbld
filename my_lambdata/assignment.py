@@ -6,6 +6,7 @@ class CustomFrame(pandas.DataFrame):
     """
     Param: my_df (pandas.DataFrame) containing a column called "abbrev"
     """
+    
     def add_state_names(self):
         """
         Adds corresponding state names to a dataframe.
@@ -21,20 +22,24 @@ class CustomFrame(pandas.DataFrame):
         self["name"] = self["abbrev"].map(names_map)
 
 if __name__ == "__main__":
+
     print("--------------")
     #df1 = pandas.DataFrame({"abbrev": ["CA", "CT", "CO", "TX", "DC"]})
     #print(df1.head())
     #new_df = add_state_names(df1)
     #print(new_df.head())
+
     #processor = DataProcessor(df1)
     #print(processor.df.head())
     #processor.add_state_names()
     #print(processor.df.head())
-    
+
     custom_df = CustomFrame({"abbrev": ["CA", "CT", "CO", "TX", "DC"]})
     print(custom_df.head())
     custom_df.add_state_names()
     print(custom_df.head())
+
+
     #print("--------------")
     #df2 = pandas.DataFrame({"abbrev": ["OH", "MI", "CO", "TX", "PA"]})
     #print(df2.head())

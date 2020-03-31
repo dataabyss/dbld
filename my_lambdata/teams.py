@@ -17,13 +17,14 @@ class Team():
 
 class BaseballTeam(Team):
     def __init__(self, name, city, starting_pitcher, players=["Player 1"]):
-        super().__init__(name, city, players)
+        super().__init__(name, city, players) ### 'OOP, Code Style...' - 1:49 ###
         self.starting_pitcher = starting_pitcher
     def advertise(self):
         #print(f"HEY COME TO {my_team['city'].upper()} TO SEE OUR GAMES!!!")
         print(f"HEY COME TO {self.city.upper()} TO SEE OUR PITCHER {self.starting_pitcher}!!!")
 
 if __name__ == "__main__":
+    
     football_team = Team("Cowboys", "Dallas")
     print(football_team.full_name)
     football_team.advertise()
